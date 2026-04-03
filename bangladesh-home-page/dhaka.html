@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ダッカ – 有名な場所</title>
+  <meta name="description" content="バングラデシュの首都ダッカについて：歴史、有名な観光地、文化などを紹介。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #f8f9fa;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0077b6;
+      color: #fff;
+      padding: 16px 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+    section {
+      margin-bottom: 40px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0077b6;
+      border-left: 5px solid #0077b6;
+      padding-left: 10px;
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      color: #666;
+      padding: 20px;
+      background-color: #eee;
+    }
+    .floating-back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #0077b6;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .floating-back-button:hover {
+      background: #005a8c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    }
+    .floating-back-button:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <button class="floating-back-button" onclick="goBack()">
+    ← 戻る
+  </button>
+
+  <header>
+    <h1>バングラデシュの首都・ダッカ</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>ダッカについて</h2>
+      <p>ダッカ（Dhaka）は、バングラデシュの首都であり、経済、文化、政治の中心です。17世紀のムガル帝国の時代から栄えてきた歴史ある都市で、現在も活気に満ちています。</p>
+    </section>
+
+    <section>
+      <h2>有名な観光地</h2>
+
+      <h3>ラルバグ・フォート（Lalbagh Fort）</h3>
+      <img src="image/lalbag.jpg" alt="ラルバグ・フォート">
+      <p>17世紀に建てられた未完成のムガル要塞で、美しい庭園と建築が特徴です。</p>
+
+      <h3>アーサン・マンジル（Ahsan Manzil）</h3>
+      <img src="image/ahsan.jpg" ALT="アーサン・マンジル">
+      <p>かつてダッカのナワブ家の宮殿であり、現在は博物館として一般公開されています。ピンク色の外観が印象的です。</p>
+
+      <h3>国会議事堂（National Parliament House）</h3>
+      <img src="image/son.webp" alt="国会議事堂">
+      <p>建築家ルイス・カーンによる設計で、近代建築の傑作とされています。外観の幾何学的デザインが特徴的です。</p>
+
+      <h3>スター・モスク（Star Mosque）</h3>
+      <img src="image/star" alt="スター・モスク">
+      <p>モザイクタイルで星模様が描かれた美しいモスクで、オールド・ダッカの人気スポットです。</p>
+
+      <h3>ハティルジル（Hatirjheel）</h3>
+      <img src="image/hati.jpg" alt="ハティルジル">
+      <p>夜のライトアップが美しい湖周辺のエリアで、散歩や写真撮影に最適です。</p>
+    </section>
+
+    <section>
+      <h2>地図</h2>
+      <iframe title="ダッカ地図" src="https://www.google.com/maps?q=Dhaka&output=embed" width="100%" height="420" style="border:0; border-radius:10px;" loading="lazy"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> BD GROUP</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    function goBack() {
+      window.history.back();
+    }
+
+    // Make button more visible on scroll
+    window.addEventListener('scroll', function() {
+      const button = document.querySelector('.floating-back-button');
+      if (window.scrollY > 100) {
+        button.style.background = '#005a8c';
+        button.style.boxShadow = '0 6px 20px rgba(0,0,0,0.5)';
+      } else {
+        button.style.background = '#0077b6';
+        button.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+      }
+    });
+  </script>
+</body>
+</html>

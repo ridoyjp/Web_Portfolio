@@ -1,0 +1,407 @@
+/* ===============================
+   Bangladesh Travel Guide – styles.css
+   Palette & feel inspired by the remembered CSS
+   =============================== */
+
+/* CSS Variables */
+:root{
+  --primary:#006a4e;
+  --primary-600:#0a7b5b;
+  --secondary:#f42a41;
+  --accent:#ffc107;
+  --bg:#f8f9fa;
+  --surface:#ffffff;
+  --text:#212529;
+  --muted:#6c757d;
+  --ring:rgba(0,106,78,.25);
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+  --radius:16px;
+  --transition:all .3s ease;
+}
+
+/* Reset-ish */
+*{box-sizing:border-box}
+html,body{height:100%}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit;color:inherit}
+
+/* Utilities */
+.container{width:100%;max-width:1200px;margin-inline:auto;padding:0 20px}
+.section{padding:80px 0}
+.section.alt{background:var(--surface)}
+.grid{display:grid;gap:24px}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+.row.between{justify-content:space-between;align-items:center}
+.tag{
+  display:inline-block;background:rgba(0,106,78,.08);color:var(--primary);
+  padding:4px 10px;border-radius:999px;font-size:.75rem;margin-right:6px
+}
+.small{font-size:.9rem}
+
+/* Skip link */
+.skip-link{
+  position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden
+}
+.skip-link:focus{
+  left:16px;top:12px;width:auto;height:auto;background:#000;color:#fff;
+  padding:10px 14px;border-radius:10px;z-index:10000
+}
+
+/* Header / Nav */
+.header{
+  position:sticky;top:0;z-index:1000;
+  backdrop-filter:blur(16px);
+  background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(248,249,250,.85));
+  border-bottom:1px solid rgba(0,0,0,.06);
+  box-shadow:0 8px 24px rgba(0,106,78,.08);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:64px}
+.brand{
+  display:inline-flex;align-items:center;gap:10px;padding:6px 10px;border-radius:999px;
+  position:relative;overflow:hidden;isolation:isolate
+}
+.brand:hover{transform:translateY(-1px);transition:var(--transition)}
+.flag{
+  width:28px;height:20px;border-radius:4px;box-shadow:0 4px 14px rgba(0,106,78,.35) inset;
+  background:
+    radial-gradient(circle at 55% 50%, #f42a41 0 45%, transparent 46%),
+    linear-gradient(#006a4e,#006a4e);
+}
+.brand-text{font-weight:800;letter-spacing:.2px;
+  background:linear-gradient(90deg,#f42a41, #fff 35%, #006a4e 70%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+
+/* Menu */
+.menu{display:flex}
+.menu ul{display:flex;gap:20px;align-items:center;list-style:none;margin:0;padding:0}
+.menu a{
+  position:relative;padding:10px 4px;font-weight:600;color:var(--text);opacity:.9
+}
+.menu a:hover{color:var(--secondary)}
+.menu a::after{
+  content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--secondary);
+  transform:scaleX(0);transform-origin:left;transition:transform .25s ease
+}
+.menu a:hover::after{transform:scaleX(1)}
+
+.menu-btn{
+  display:none;border:0;background:transparent;font-size:26px;cursor:pointer;line-height:1;
+  padding:6px 10px;border-radius:10px;color:var(--primary)
+}
+.menu-btn:hover{background:rgba(0,106,78,.08)}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 22px;border-radius:999px;border:0;
+  background:linear-gradient(135deg,var(--primary),#0f8e6b);
+  color:#fff;font-weight:700;box-shadow:var(--shadow);
+  transition:var(--transition)
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,106,78,.25)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn.ghost{
+  background:transparent;color:var(--primary);
+  border:2px solid rgba(0,106,78,.3);box-shadow:none
+}
+.btn.ghost:hover{background:rgba(0,106,78,.08)}
+
+/* Hero */
+.hero{
+  position:relative;min-height:90svh;color:#fff;display:grid;place-items:center;
+  text-align:center;isolation:isolate;overflow:hidden
+}
+.hero-slider{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.hero .vid,
+.hero .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.7)}
+.hero .slide{opacity:0;transition:opacity 1s ease}
+.hero .slide.active{opacity:1}
+.container-hero-inner{padding:120px 20px 80px}
+.hero h1{font-size:clamp(2rem,6vw,3.5rem);margin:0 0 12px}
+.hero p{font-size:clamp(1rem,2.8vw,1.2rem);opacity:.95;margin-bottom:18px}
+.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero-credit{
+  position:absolute;right:12px;bottom:10px;font-size:.8rem;opacity:.75;background:rgba(0,0,0,.35);
+  padding:6px 10px;border-radius:8px
+}
+
+/* About */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:18px}
+.stat{
+  background:var(--surface);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:6px
+}
+.stat span{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+/* Cards (Highlights, Foods) */
+.cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{
+  background:var(--surface);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);
+  transition:transform .25s ease, box-shadow .25s ease;display:grid;grid-template-rows:auto 1fr
+}
+.card img{height:180px;object-fit:cover;transition:transform .4s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.12)}
+.card:hover img{transform:scale(1.06)}
+.card-body{padding:16px}
+.card-body h3{margin:0 0 6px;color:var(--primary)}
+
+/* Places */
+.places{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.place{background:var(--surface);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.place img{height:200px;object-fit:cover}
+.place-body{padding:16px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 18px}
+.chip{
+  background:var(--surface);border:1px solid rgba(0,0,0,.08);padding:8px 14px;border-radius:999px;
+  cursor:pointer;font-weight:600;transition:var(--transition)
+}
+.chip:hover{transform:translateY(-2px)}
+.chip.is-active{background:linear-gradient(135deg,var(--primary),#0f8e6b);color:#fff;border-color:transparent}
+
+/* Tabs (Itineraries) */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.tab{
+  padding:10px 16px;border-radius:999px;border:1px solid rgba(0,0,0,.1);
+  background:var(--surface);cursor:pointer;font-weight:700;color:var(--primary)
+}
+.tab.is-active{background:linear-gradient(135deg,var(--primary),#0f8e6b);color:#fff;border-color:transparent}
+.tab-panels{background:var(--surface);border-radius:14px;box-shadow:var(--shadow);padding:16px}
+.tab-panel[hidden]{display:none !important}
+.timeline{margin:0;padding-left:18px}
+.timeline li{margin:10px 0}
+
+/* Map */
+.map-wrap{
+  position:relative;border-radius:14px;overflow:hidden;
+  box-shadow:var(--shadow);background:#e9ecef
+}
+.map-wrap iframe{border:0;display:block;width:100%;height:min(70vh,520px)}
+
+/* Gallery + Lightbox */
+.gallery{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g{display:block;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.g img{height:200px;object-fit:cover;transition:transform .35s ease}
+.g:hover img{transform:scale(1.05)}
+
+.lightbox{
+  position:fixed;inset:0;background:rgba(0,0,0,.8);
+  display:grid;place-items:center;padding:24px;z-index:1200;opacity:0;pointer-events:none;
+  transition:opacity .25s ease
+}
+.lightbox.is-open{opacity:1;pointer-events:auto}
+.lightbox img{max-height:80svh;width:auto;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.6)}
+.lightbox-cap{color:#fff;margin-top:10px;text-align:center;max-width:900px}
+.lightbox-close{
+  position:absolute;top:16px;right:16px;font-size:32px;line-height:1;padding:6px 12px;
+  background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.35);color:#fff;border-radius:12px;
+  cursor:pointer
+}
+
+/* Forms */
+form{display:grid;gap:16px;background:var(--surface);padding:20px;border-radius:16px;box-shadow:var(--shadow)}
+label{display:grid;gap:8px;font-weight:700}
+input[type="text"],input[type="email"],textarea{
+  padding:12px 14px;border-radius:12px;border:2px solid #e9ecef;background:#f8f9fa;transition:var(--transition)
+}
+input:focus,textarea:focus{
+  outline:none;border-color:var(--primary);background:#fff;box-shadow:0 0 0 4px var(--ring)
+}
+.checkbox{display:flex;align-items:center;gap:10px;font-weight:600}
+.form-msg{margin:0;font-weight:700;color:var(--primary)}
+
+/* Footer */
+.footer{
+  margin-top:60px;background:linear-gradient(135deg,var(--primary) 0%, #1a5f3f 50%, var(--primary) 100%);
+  color:#fff;position:relative;overflow:hidden
+}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:70px}
+.to-top{
+  border:0;border-radius:12px;padding:10px 14px;background:rgba(255,255,255,.15);
+  color:#fff;cursor:pointer;backdrop-filter:blur(6px)
+}
+.to-top:hover{background:#fff;color:var(--primary)}
+
+/* Focus styles */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visible,textarea:focus-visible{
+  outline:3px solid var(--accent);outline-offset:2px;border-radius:10px
+}
+
+/* Responsive */
+@media (max-width: 960px){
+  .menu{position:absolute;inset:auto 0 0 0;top:64px;background:rgba(255,255,255,.95);
+    border-top:1px solid rgba(0,0,0,.06);backdrop-filter:blur(16px);box-shadow:0 20px 40px rgba(0,0,0,.1);
+    transform:translateY(-20px);opacity:0;visibility:hidden;transition:var(--transition)
+  }
+  .menu ul{flex-direction:column;padding:14px}
+  .menu.open{transform:translateY(0);opacity:1;visibility:visible}
+  .menu-btn{display:inline-block}
+}
+@media (max-width: 600px){
+  .container-hero-inner{padding:100px 16px 70px}
+  .card img{height:160px}
+  .place img{height:180px}
+}
+
+/* Fix for anchor scrolling being hidden under fixed header */
+[id] { scroll-margin-top: 80px; }
+/* --- Food Carousel --- */
+.carousel { position: relative; margin-top: 16px; }
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 6px;
+}
+.carousel .card {
+  min-width: 260px;
+  max-width: 260px;
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+.car-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary), #0f8e6b);
+  color: #fff;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  line-height: 1;
+  font-size: 20px;
+}
+.car-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,106,78,.25);
+}
+.car-btn[disabled] {
+  opacity: .4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+@media (max-width: 600px) {
+  .carousel .card { min-width: 220px; max-width: 220px; }
+}
+
+
+
+
+/* ===== Logo & Flag Animation (No White) ===== */
+
+.brand {
+  position: relative;
+  isolation: isolate;
+}
+
+/* soft glow when hovering */
+.brand::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 999px;
+  background: conic-gradient(from 0deg, #f42a41, #006a4e, #f42a41);
+  filter: blur(14px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.brand:hover::before {
+  opacity: 0.35;
+}
+
+/* animated Bangladesh flag */
+.flag {
+  width: 28px;
+  height: 20px;
+  border-radius: 4px;
+  background:
+    radial-gradient(circle at 55% 50%, #f42a41 0 45%, transparent 46%),
+    linear-gradient(#006a4e, #006a4e);
+  transform-origin: left center;
+  animation: flag-wave 3s ease-in-out infinite;
+}
+
+@keyframes flag-wave {
+  0%, 100% {
+    transform: skewY(0deg) rotate(0deg);
+  }
+  50% {
+    transform: skewY(-3deg) rotate(-0.6deg);
+  }
+}
+
+/* soft shining brand text */
+.brand-text {
+  background: linear-gradient(90deg, #f42a41, #006a4e, #f42a41);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Scroll Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.8s ease;
+}
+
+/* Menu Active */
+.menu a.active {
+  color: var(--secondary);
+}
+
+.menu a.active::after {
+  transform: scaleX(1);
+}
+
+/* Ripple Effect */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn span {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background: rgba(255,255,255,0.5);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

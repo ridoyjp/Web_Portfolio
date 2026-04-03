@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>バングラデシュ旅行ガイド</title>
+  <meta name="description" content="バングラデシュを探検：歴史・文化・自然・グルメ・旅のヒントをまとめた総合ガイド。" />
+  <link rel="icon" type="image/jpeg" href="image/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">メインコンテンツへ移動</a>
+
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="ホームへ戻る">
+        <span class="flag" aria-hidden="true"></span>
+        <span class="brand-text">Bangladesh</span>
+      </a>
+
+      <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="menuList" aria-label="メニューを開閉">
+        ☰
+      </button>
+
+      <nav class="menu" aria-label="主要ナビゲーション">
+        <ul id="menuList">
+          <li><a href="#about">バングラデシュとは</a></li>
+          <li><a href="#highlights">ハイライト</a></li>
+          <li><a href="#divisions">地方（ディビジョン）</a></li>
+          <li><a href="#itinerary">モデルプラン</a></li>
+          <li><a href="#food">必食グルメ</a></li>
+          <li><a href="#map">地図</a></li>
+          <li><a href="#gallery">写真ギャラリー</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" role="banner" aria-label="バングラデシュの見どころ">
+    <div class="hero-slider">
+      <video class="vid" playsinline muted loop autoplay preload="metadata"
+        poster="https://images.unsplash.com/photo-1572274400387-90d6d2d7a50b?q=80&w=1920&auto=format&fit=crop"
+        style="pointer-events:none; user-select:none;">
+        <source src="./images/bd flad video.mp4" type="video/mp4">
+        お使いのブラウザは動画に対応していません。
+      </video>
+    </div>
+
+    <div class="container-hero-inner">
+      <h1>ようこそ、バングラデシュへ</h1>
+      <p>歴史と文化、無数の川、世界最長級の天然ビーチ。あなたにぴったりの旅を計画しよう。</p>
+      <div class="hero-cta">
+        <a class="btn" href="#highlights">見どころをチェック</a>
+        <a class="btn ghost" href="#itinerary">モデル日程を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>バングラデシュとは</h2>
+        <p>
+          バングラデシュは南アジアに位置し、大河がつくる肥沃なデルタに抱かれた国です。活気ある首都ダッカ、世界最大級のマングローブ林スンダルバンス、そしてコックスバザールの広大な砂浜まで、温かなホスピタリティと豊かな食文化が息づいています。
+        </p>
+        <div class="stats">
+          <div class="stat"><span>首都</span>ダッカ</div>
+          <div class="stat"><span>ベストシーズン</span>10月〜3月</div>
+          <div class="stat"><span>通貨</span>BDT（タカ）</div>
+          <div class="stat"><span>言語</span>ベンガル語（Bangla）</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section id="highlights" class="section alt">
+      <div class="container">
+        <h2>ハイライト</h2>
+        <div class="grid cards">
+          <a href="dhaka.html" class="card-link">
+            <article class="card">
+              <img src="./image/dhaka.jpg" alt="オールド・ダッカの河岸と歴史建築">
+              <div class="card-body">
+                <h3>Dhaka（ダッカ）</h3>
+                <p>ムガル要塞やピンクの宮殿、川の暮らし、絶品ストリートフード。</p>
+              </div>
+            </article>
+          </a>
+          <a href="coxs-bazar.html" class="card-link">
+            <article class="card">
+              <img src="./images/inani-beach.jpg" alt="コックスバザールの果てしない海岸線">
+              <div class="card-body">
+                <h3>Cox's Bazar（コックスバザール）</h3>
+                <p>世界最長級の天然ビーチ。夕日と波音に癒やされるリゾート。</p>
+              </div>
+            </article>
+          </a>
+          <a href="sundarbans.html" class="card-link">
+            <article class="card">
+              <img src="./images/sondorbans.jpg" alt="スンダルバンスのマングローブ">
+              <div class="card-body">
+                <h3>Sundarbans（スンダルバンス）</h3>
+                <p>迷路のような水路と希少な野生動物が暮らす世界遺産の森。</p>
+              </div>
+            </article>
+          </a>
+          <a href="bandarban.html" class="card-link">
+            <article class="card">
+              <img src="./images/Bandarban.jpg" alt="霧立つ丘陵が続くバンダルバン">
+              <div class="card-body">
+                <h3>Bandarban（バンダルバン）</h3>
+                <p>南東部の山岳地帯。滝と展望、先住民族文化に出会う旅。</p>
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisions -->
+    <section id="divisions" class="section alt">
+      <div class="container">
+        <h2>地方（ディビジョン）</h2>
+        <p class="small">各地方の特徴をタップして確認。</p>
+
+        <div class="grid cards">
+          <article class="card">
+            <img src="image/dhaka1.jpg" alt="ダッカの街並み">
+            <div class="card-body">
+              <h3>ダッカ</h3>
+              <p>商業・教育・首都機能 ─ 国の心臓部。</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="image/chattagong.jpg" alt="チャットグラムの海と港">
+            <div class="card-body">
+              <h3>チャットグラム</h3>
+              <p>海と港 ─ ビーチと活気あるハーバー。</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="image/khulna.jpg" alt="クルナとスンダルバンスの玄関口">
+            <div class="card-body">
+              <h3>クルナ</h3>
+              <p>スンダルバンス＆シャットゴンブジュへのゲート。</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="image/rajsahi.png" alt="ラジシャヒのマンゴー地帯">
+            <div class="card-body">
+              <h3>ラジシャヒ</h3>
+              <p>マンゴーの里 ─ 絹織物と川辺の文化。</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="image/barishal.jpg" alt="川と稲作が広がるバリシャル">
+            <div class="card-body">
+              <h3>バリシャル</h3>
+              <p>川と米 ─ 水上マーケットと緑の田園。</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="image/cha.jpg" alt="シレットの茶畑">
+            <div class="card-body">
+              <h3>シレット</h3>
+              <p>茶園とシュリーマンガル ─ 緑の丘陵地帯。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food -->
+    <section id="food" class="section">
+      <div class="container">
+        <div class="row between" style="align-items:center">
+          <h2>必食グルメ</h2>
+          <div class="row" style="gap:8px">
+            <button class="car-btn prev" aria-label="前へ">‹</button>
+            <button class="car-btn next" aria-label="次へ">›</button>
+          </div>
+        </div>
+
+        <div class="carousel">
+          <div class="carousel-track">
+            <article class="card">
+              <img src="images/briani.jpg" alt="カッチ・ビリヤニ">
+              <div class="card-body"><h3>Kacchi Biryani</h3><p>香り高い米と漬け込み肉のごちそう。</p></div>
+            </article>
+
+            <article class="card">
+              <img src="images/fuska pani pori.jpg" alt="フチカ（パニプリ）">
+              <div class="card-body"><h3>Fuchka</h3><p>パリッとした殻に酸味のある具を詰めた屋台の定番。</p></div>
+            </article>
+
+            <article class="card">
+              <img src="images/panta ilish.webp" alt="イリッシュ（ヒルサ）">
+              <div class="card-body"><h3>Hilsa</h3><p>マスタードと合わせる国民的な川魚。</p></div>
+            </article>
+
+            <article class="card">
+              <img src="images/misti.jpg" alt="ミシュティ（ベンガル菓子）">
+              <div class="card-body"><h3>Mishti</h3><p>やさしい甘さの伝統スイーツ。</p></div>
+            </article>
+
+            <article class="card">
+              <img src="image/teheri 2.jpg" alt="テヘリ">
+              <div class="card-body"><h3>Tehari</h3><p>オールド・ダッカ発祥、スパイス香る牛肉ごはん。</p></div>
+            </article>
+
+            <article class="card">
+              <img src="image/vorta.jpg" alt="ボルタ盛り合わせ">
+              <div class="card-body"><h3>Bhorta Platter</h3><p>野菜や魚を潰して唐辛子で和えた家庭の味。</p></div>
+            </article>
+
+            <article class="card">
+              <img src="image/beef bhuna.jpg" alt="ビーフ・ブナ">
+              <div class="card-body"><h3>Beef Bhuna</h3><p>じっくり煮込んだスパイシーな牛肉カレー。</p></div>
+            </article>
+
+            <article class="card">
+              <img src="image/kabab1.jpg" alt="ケバブ">
+              <div class="card-body"><h3>Kebab</h3><p>香ばしく焼いた串肉。ナンと相性抜群。</p></div>
+            </article>
+
+            <article class="card">
+              <img src="image/pitha.jpg" alt="ピタ（季節の米菓）">
+              <div class="card-body"><h3>Pitha</h3><p>冬の名物、米粉で作る素朴なスイーツ。</p></div>
+            </article>
+
+            <article class="card">
+              <img src="image/chinggri.jpg" alt="チンギリ・マライ（海老のココナツ煮）">
+              <div class="card-body"><h3>Chingri Malai</h3><p>海老をココナツミルクでまろやかに。</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inline carousel script (そのままでOK) -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const track = document.querySelector(".carousel-track");
+          const prev = document.querySelector(".car-btn.prev");
+          const next = document.querySelector(".car-btn.next");
+
+          const step = () => Math.max(track.clientWidth * 0.9, 260);
+          const update = () => {
+            const max = track.scrollWidth - track.clientWidth - 2;
+            prev.disabled = track.scrollLeft <= 0;
+            next.disabled = track.scrollLeft >= max;
+          };
+
+          prev.addEventListener("click", () => {
+            track.scrollBy({ left: -step(), behavior: "smooth" });
+            setTimeout(update, 300);
+          });
+          next.addEventListener("click", () => {
+            track.scrollBy({ left: step(), behavior: "smooth" });
+            setTimeout(update, 300);
+          });
+
+          track.addEventListener("scroll", update, { passive: true });
+          window.addEventListener("resize", update);
+          update();
+        });
+      </script>
+    </section>
+
+    <!-- BD Sports -->
+    <section id="bd-sports" class="section alt">
+      <div class="container">
+        <h2>バングラデシュのスポーツ</h2>
+        <div class="grid cards">
+          <article class="card">
+            <img src="image/cricet.webp" alt="バングラデシュのクリケット">
+            <div class="card-body">
+              <h3>Cricket（クリケット）</h3>
+              <p>国民的人気。熱気あふれるスタジアムと情熱的なファン。</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="image/football.avif" alt="フットボールの試合">
+            <div class="card-body">
+              <h3>Football（フットボール）</h3>
+              <p>校庭から街リーグまで。スピード感とテクニックが魅力。</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="image/kabadi.jpg" alt="カバディの試合">
+            <div class="card-body">
+              <h3>Kabaddi（カバディ）</h3>
+              <p>国技。俊敏さとチームワークで村の大会も大盛り上がり。</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="image/bet.jpg" alt="バドミントンのプレー">
+            <div class="card-body">
+              <h3>Badminton（バドミントン）</h3>
+              <p>スピードと精密さが光る、身近で奥深いスポーツ。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery (Lightbox) -->
+  <!-- 写真ギャラリー（3枚プレビュー＋もっと見るボタン） -->
+<section id="gallery" class="section">
+  <div class="container">
+    <h2>写真ギャラリー</h2>
+
+    <!-- 3枚の静的プレビュー画像 -->
+    <div class="grid gallery" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
+      <div class="g">
+        <img src="images/Dhaka City Riverside.jpg" alt="ダッカの川辺">
+      </div>
+      <div class="g">
+        <img src="images/inani-beach.jpg" alt="イナニ・ビーチ">
+      </div>
+      <div class="g">
+        <img src="images/sondorbans.jpg" alt="スンダルバンスのマングローブ林">
+      </div>
+    </div>
+
+    <!-- 「もっと見る」ボタン -->
+    <div class="row" style="justify-content:center; margin-top:24px;">
+      <a class="btn" href="gallery.html" style="font-size:1.1rem; padding:14px 28px;">
+        もっと見る
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Itineraries (Tabs) -->
+    <section id="itinerary" class="section alt">
+      <div class="container">
+        <h2>モデルプラン</h2>
+        <div class="tabs" role="tablist" aria-label="日程タブ">
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="tab3">3日間</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="tab7">7日間</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="tab10">10日間</button>
+        </div>
+
+        <div class="tab-panels">
+          <div id="tab3" class="tab-panel is-active" role="tabpanel">
+            <ul class="timeline">
+              <li><strong>1日目：</strong> ダッカ市内観光 ― アーサン・マンジル、ラルバグ要塞、川下り。</li>
+              <li><strong>2日目：</strong> コックスバザールへ空路 ― ビーチ散歩と海鮮ディナー。</li>
+              <li><strong>3日目：</strong> イナニで朝日鑑賞 ― ダッカへ戻る。</li>
+            </ul>
+          </div>
+          <div id="tab7" class="tab-panel" role="tabpanel" hidden>
+            <ul class="timeline">
+              <li><strong>1–2日目：</strong> ダッカの歴史とグルメを満喫。</li>
+              <li><strong>3–4日目：</strong> スンダルバンスでボートサファリ（公認ガイド同行）。</li>
+              <li><strong>5–6日目：</strong> コックスバザール＆イナニビーチ。</li>
+              <li><strong>7日目：</strong> 帰路、最後のショッピング。</li>
+            </ul>
+          </div>
+          <div id="tab10" class="tab-panel" role="tabpanel" hidden>
+            <ul class="timeline">
+              <li><strong>1–2日目：</strong> ダッカの見どころ巡り。</li>
+              <li><strong>3–5日目：</strong> スンダルバンス周遊＆村訪問。</li>
+              <li><strong>6–7日目：</strong> バンダルバンでトレッキングと展望台。</li>
+              <li><strong>8–9日目：</strong> コックスバザールでのんびり。</li>
+              <li><strong>10日目：</strong> フライト／予備日。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section id="map" class="section alt">
+      <div class="container">
+        <h2>地図</h2>
+        <p>主要な観光地にピンを配置。拡大・ドラッグで自由に探索できます。</p>
+        <div class="map-wrap">
+          <iframe
+            title="バングラデシュ地図"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=88.0,20.5,93.0,26.8&layer=mapnik&marker=23.8103,90.4125"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section alt">
+      <div class="container">
+        <h2>よくある質問</h2>
+        <details>
+          <summary>旅行のベストシーズンは？</summary>
+          <p>一般的には乾季の10月〜3月です。6〜9月は高温・多雨になります。</p>
+        </details>
+        <details>
+          <summary>英語は通じますか？</summary>
+          <p>公用語はベンガル語ですが、主要都市やホテル、ガイドは英語を理解します。</p>
+        </details>
+        <details>
+          <summary>ビザは必要ですか？</summary>
+          <p>多くの国籍で必要です。最新の公式情報を必ず確認してください。</p>
+        </details>
+      </div>
+    </section>
+
+<!-- コンパクトなありがとうセクション -->
+<section class="section" style="padding:40px 0; text-align:center;">
+  <div class="container"
+       style="background:white; border-radius:18px; padding:25px 16px;
+              box-shadow:0 6px 20px rgba(0,0,0,0.06);
+              max-width:600px; margin:auto;">
+    <h2 style="font-size:1.6rem; font-weight:800;
+               background:linear-gradient(90deg,#00a676,#0096c7);
+               -webkit-background-clip:text;
+               -webkit-text-fill-color:transparent;
+               display:inline-flex; align-items:center; gap:8px; margin:0;">
+      ✈️ ご覧いただきありがとうございます！
+    </h2>
+    <p style="font-size:0.95rem; color:#555; margin-top:8px;">
+      バングラデシュの旅が素敵な思い出になりますように。
+    </p>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> BD GROUP</p>
+      <button id="toTop" class="to-top" aria-label="先頭へ戻る">↑</button>
+    </div>
+
+    
+
+
+  </footer>
+
+  <!-- Inline JS for tabs/menu/year/back-to-top -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Tabs
+    const tabs = document.querySelectorAll(".tabs .tab");
+    const panels = document.querySelectorAll(".tab-panels .tab-panel");
+    function activate(tabId) {
+      tabs.forEach(tab => {
+        const active = tab.dataset.tab === tabId;
+        tab.classList.toggle("is-active", active);
+        tab.setAttribute("aria-selected", active);
+      });
+      panels.forEach(panel => {
+        const active = panel.id === tabId;
+        panel.classList.toggle("is-active", active);
+        panel.toggleAttribute("hidden", !active);
+      });
+    }
+    tabs.forEach(tab => tab.addEventListener("click", () => activate(tab.dataset.tab)));
+
+    // Back to top
+    const toTop = document.getElementById("toTop");
+    if (toTop) toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // Mobile menu
+    const menuBtn = document.getElementById("menuBtn");
+    const menu = document.querySelector(".menu");
+    if (menuBtn && menu) {
+      menuBtn.addEventListener("click", () => {
+        const open = menu.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", open);
+      });
+    }
+
+    // Footer year
+    const year = document.getElementById("year");
+    if (year) year.textContent = new Date().getFullYear();
+  });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

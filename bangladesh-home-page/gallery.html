@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>バングラデシュ旅行ガイド – 写真ギャラリー</title>
+  <meta name="description" content="バングラデシュ旅行ガイドで使用している写真をまとめたギャラリーページです。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .gallery-cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+
+    /* Back Button Position */
+.back-container{
+  display:flex;
+  justify-content:flex-end;
+  padding:10px 20px;
+  background:#fff;
+}
+
+/* Back Button Design */
+.back-btn{
+  text-decoration:none;
+  background:#007bff;
+  color:#fff;
+  padding:8px 16px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.back-btn:hover{
+  background:#0056b3;
+}
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#main">メインコンテンツへスキップ</a>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container nav">
+
+    <a href="index.html" class="brand">
+      <span class="flag"></span>
+      <span class="brand-text">Bangladesh</span>
+    </a>
+
+    <!-- ✅ BACK BUTTON -->
+    
+
+    <button id="menuBtn" class="menu-btn">☰</button>
+
+    <nav class="menu">
+      <ul id="menuList">
+        <li><a href="index.html#about">バングラデシュとは</a></li>
+        <li><a href="index.html#highlights">見どころ</a></li>
+        <li><a href="index.html#divisions">地方</a></li>
+        <li><a href="index.html#itinerary">モデルプラン</a></li>
+        <li><a href="index.html#food">グルメ</a></li>
+        <li><a href="gallery.html" aria-current="page">写真ギャラリー</a></li>
+        <li><a href="index.html#faq">よくある質問</a></li>
+     
+     
+      </ul>
+      
+    </nav>
+
+  </div>
+</header>
+<div class="back-container">
+  <a href="index.html" class="back-btn">← ホームに戻る</a>
+</div>
+</header>
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <h2>Photo Gallery</h2>
+        <p class="small">A collection of images used across the site. Click any card to view full size.</p>
+
+        <div class="grid gallery-cards">
+          
+          <!-- Hero / Slides -->
+          <a class="card" data-lightbox href="./images/sundarbans-mangrove-forest.jpg" data-caption="Sundarbans Mangrove Forest">
+            <img src="./images/Sundarban-National-Park.jpg" alt="Sundarbans Mangrove Forest">
+            <div class="card-body"><h3>Sundarbans</h3><p>Mangrove maze waterways</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/pangthumai-waterfall.jpg" data-caption="Pangthumai Waterfall">
+            <img src="./images/pangthujai water fall.jpg" alt="Pangthumai Waterfall">
+            <div class="card-body"><h3>Pangthumai Waterfall</h3><p>Sylhet region</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/bandarban-hills-morning-mist.webp" data-caption="Bandarban Hills Morning Mist">
+            <img src="./images/Bandarban Hills Morning Mist.webp" alt="Bandarban Hills Morning Mist">
+            <div class="card-body"><h3>Bandarban Hills</h3><p>Morning mist</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/Dhaka City Riverside.jpg" data-caption="Dhaka City Riverside">
+            <img src="./images/Dhaka City Riverside1.jpg" alt="Dhaka City Riverside">
+            <div class="card-body"><h3>Dhaka Riverside</h3><p>Capital city</p></div>
+          </a>
+
+          <!-- Highlights cards -->
+          <a class="card" data-lightbox href="./images/Dhaka City Riverside.jpg" data-caption="Dhaka highlights">
+            <img src="./images/Dhaka City Riverside.jpg" alcityt="Dhaka highlights">
+            <div class="card-body"><h3>Dhaka</h3><p>Highlights image</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/inani-beach.jpg" data-caption="Cox's Bazar – Inani Beach">
+            <img src="./images/inani-beach.jpg" alt="Cox's Bazar – Inani Beach">
+            <div class="card-body"><h3>Inani Beach</h3><p>Cox's Bazar</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/sondorbans.jpg" data-caption="Sundarbans">
+            <img src="./images/sondorbans.jpg" alt="Sundarbans">
+            <div class="card-body"><h3>Sundarbans</h3><p>Highlights image</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/Bandarban.jpg" data-caption="Bandarban hills & valleys">
+            <img src="./images/Bandarban.jpg" alt="Bandarban hills">
+            <div class="card-body"><h3>Bandarban</h3><p>Highlights image</p></div>
+          </a>
+
+          <!-- Top Places -->
+          <a class="card" data-lightbox href="./images/lalbagh flot.jpg" data-caption="Lalbagh Fort, Dhaka">
+            <img src="./images/lalbagh flot.jpg" alt="Lalbagh Fort, Dhaka">
+            <div class="card-body"><h3>Lalbagh Fort</h3><p>Old Dhaka</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/amiakhum.jpg" data-caption="Amiakhum Waterfall, Bandarban">
+            <img src="./images/amiakhum.jpg" alt="Amiakhum Waterfall">
+            <div class="card-body"><h3>Amiakhum</h3><p>Bandarban</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/inani beach.jpg" data-caption="Inani Beach near Cox's Bazar">
+            <img src="./images/inani beach.jpg" alt="Inani Beach near Cox's Bazar">
+            <div class="card-body"><h3>Inani Beach</h3><p>Top places</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/sajek vally.jpg" data-caption="Puthia Temples / Sajek Vally image">
+            <img src="./images/sajek vally.jpg" alt="Sajek vally / Puthia Temples">
+            <div class="card-body"><h3>Puthia / Sajek</h3><p>Rajshahi / Rangamati</p></div>
+          </a>
+
+          <!-- Food -->
+          <a class="card" data-lightbox href="./images/briani.jpg" data-caption="Kacchi Biryani">
+            <img src="./images/briani.jpg" alt="Kacchi Biryani">
+            <div class="card-body"><h3>Kacchi Biryani</h3><p>Must-try food</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/fuska pani pori.jpg" data-caption="Fuchka">
+            <img src="./images/fuska pani pori.jpg" alt="Fuchka">
+            <div class="card-body"><h3>Fuchka</h3><p>Street snack</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/panta ilish.webp" data-caption="Hilsa">
+            <img src="./images/panta ilish.webp" alt="Hilsa">
+            <div class="card-body"><h3>Hilsa</h3><p>River fish</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="./images/misti.jpg" data-caption="Mishti">
+            <img src="./images/misti.jpg" alt="Mishti sweets">
+            <div class="card-body"><h3>Mishti</h3><p>Sweets</p></div>
+          </a>
+
+          <!-- Dhaka subpage images (if present) -->
+          <a class="card" data-lightbox href="image/lalbag.jpg" data-caption="Lalbagh Fort (Dhaka page)">
+            <img src="image/lalbag.jpg" alt="Lalbagh Fort image">
+            <div class="card-body"><h3>Lalbagh (Subpage)</h3><p>Dhaka page</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="image/ahsan.jpg" data-caption="Ahsan Manzil">
+            <img src="image/ahsan.jpg" alt="Ahsan Manzil">
+            <div class="card-body"><h3>Ahsan Manzil</h3><p>Dhaka page</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="image/son.webp" data-caption="National Parliament House">
+            <img src="image/son.webp" alt="National Parliament House">
+            <div class="card-body"><h3>Parliament House</h3><p>Dhaka page</p></div>
+          </a>
+
+          <a class="card" data-lightbox href="image/hati.jpg" data-caption="Hatirjheel at night">
+            <img src="image/hati.jpg" alt="Hatirjheel">
+            <div class="card-body"><h3>Hatirjheel</h3><p>Dhaka page</p></div>
+          </a>
+
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+          <button class="lightbox-close" aria-label="Close">×</button>
+          <img id="lightboxImg" alt="">
+          <p id="lightboxCap" class="lightbox-cap"></p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Bangladesh Travel Guide. All rights reserved.</p>
+      <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+    </div>
+  </footer>
+
+  <script>
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Minimal mobile menu toggle (no external app.js needed)
+    (function(){
+      const btn = document.getElementById('menuBtn');
+      const menu = document.querySelector('.menu');
+      if(!btn || !menu) return;
+      btn.addEventListener('click', () => menu.classList.toggle('open'));
+    })();
+
+    // Lightweight Lightbox
+    (function(){
+      const links = Array.from(document.querySelectorAll('[data-lightbox]'));
+      const lb = document.getElementById('lightbox');
+      if(!links.length || !lb) return;
+      const img = lb.querySelector('#lightboxImg');
+      const cap = lb.querySelector('#lightboxCap');
+      const closeBtn = lb.querySelector('.lightbox-close');
+      let index = 0, open = false;
+
+      function openLb(i){
+        index = i;
+        const a = links[index];
+        if(!a) return;
+        img.src = a.getAttribute('href') || a.dataset.src || a.querySelector('img')?.src;
+        cap.textContent = a.getAttribute('data-caption') || a.querySelector('img')?.alt || '';
+        lb.classList.add('is-open');
+        lb.setAttribute('aria-hidden','false');
+        open = true;
+        document.documentElement.style.overflow = 'hidden';
+        closeBtn.focus();
+        window.addEventListener('keydown', onKey);
+      }
+      function closeLb(){
+        open = false;
+        lb.classList.remove('is-open');
+        lb.setAttribute('aria-hidden','true');
+        document.documentElement.style.overflow = '';
+        window.removeEventListener('keydown', onKey);
+        links[index]?.focus();
+      }
+      function onKey(e){
+        if(!open) return;
+        if(e.key === 'Escape') closeLb();
+        if(e.key === 'ArrowRight') openLb((index + 1) % links.length);
+        if(e.key === 'ArrowLeft') openLb((index - 1 + links.length) % links.length);
+        if(e.key === 'Tab'){ e.preventDefault(); closeBtn.focus(); }
+      }
+
+      links.forEach((a, i)=>{
+        a.setAttribute('role','button');
+        a.addEventListener('click', (e)=>{
+          e.preventDefault();
+          openLb(i);
+        });
+      });
+      lb.addEventListener('click', (e)=>{ if(e.target === lb) closeLb(); });
+      closeBtn.addEventListener('click', closeLb);
+    })();
+  </script>
+</body>
+</html>
