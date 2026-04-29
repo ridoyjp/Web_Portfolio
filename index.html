@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ridoy | Webデザイナー</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet"
@@ -11,6 +12,8 @@
 <body data-theme="dark" id="top">
   <canvas id="particlesCanvas" aria-hidden="true"></canvas>
   <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
 <header class="navbar">
   <div class="logo">Ridoy | ポートフォリオ</div>
@@ -23,6 +26,7 @@
 </nav>
 </header>
 
+<main>
 <section class="hero" id="home">
   <div class="hero-left">
     <h1 class="title">
@@ -31,10 +35,14 @@
       <span class="typing" id="typingRole" data-roles="システムエンジニア,Webデザイナー,プログラマー">Webデザイナー</span>
     </h1>
 
-<button class="btn" id="contactBtn">お問い合わせ</button>
+<button class="btn magnet" id="contactBtn" type="button">お問い合わせ</button>
 
-<a class="workbtn" href="#work">
+<a class="workbtn magnet" href="#work">
   作品
+</a>
+
+<a class="hirebtn magnet" href="mailto:freelancerridoy001@gmail.com">
+  今すぐ連絡する
 </a>
 
     <div class="social">
@@ -68,7 +76,7 @@
     </div>
 
     <div class="about-text">
-      <h3>私はリドイと申します。</h3>
+      <h3>はじめまして、リドイと申します。</h3>
       <p>
         私は現在、専門学校東京テクニカルカレッジで情報処理を学び、主にWebアプリケーション開発に重点を置いて実践的なITスキルを習得しています。
 
@@ -82,319 +90,195 @@
   </div>
 </section>
 
-<section class="skills-section" id="skills">
-  <h2>スキル</h2>
-
-  <div class="skills-content">
-
-    <div class="skills-left">
-      <h3>専門スキル</h3>
-      <p>
-      基本的なフロントエンド技術を活用し、モダンでクリーンかつ効率的なWebアプリケーションの開発に積極的に取り組んでいます。
-      </p>
-
-      <div class="skill">
-        <div class="skill-title">
-          <span>HTML</span>
-          
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress html"></div>
-        </div>
+<!-- SKILLS -->
+    <section class="skills-section section reveal-up" id="skills">
+      <div class="section-heading">
+        
+        <h2>スキル</h2>
       </div>
 
-      <div class="skill">
-        <div class="skill-title">
-          <span>CSS</span>
-         
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress css"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-title">
-          <span>JavaScript</span>
-          
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress js"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-title">
-          <span>Java</span>
-          
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress c"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-title">
-          <span>C</span>
-          
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress java"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-title">
-          <span>SQL</span>
-          
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress sql"></div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="skills-right">
-      <img src="images/photo-1486312338219-ce68d2c6f44d.jpg" alt="スキル画像">
-    </div>
-
-  </div>
-</section>
-
-<section class="work-section reveal-scroll" id="work">
-
-  <!-- HEADER -->
-  <div class="work-header reveal-scroll">
-    <h2 id="workTitle">ポートフォリオ</h2>
-    <p id="workText">
-      フロントエンドおよびWeb開発スキルを活かして制作したプロジェクト一覧です。
-    </p>
-  </div>
-
-  <!-- WRAPPER -->
-  <div class="portfolio-wrap">
-
-    <!-- ================= PROJECT 1 ================= -->
-    <div class="portfolio-item reveal-zoom"
-         onclick="openProject(this)"
-         data-link="bangladesh-home-page/index.html">
-
-      <div class="portfolio-image">
-        <img src="images/bd-home-page.png" alt="バングラデシュ旅行サイト" />
-      </div>
-
-      <div class="portfolio-content">
-
-        <span class="project-tag">フロントエンドプロジェクト</span>
-
-        <h3 class="project-title">バングラデシュ旅行ガイドサイト</h3>
-
-        <p class="project-desc">
-          バングラデシュの魅力・文化・観光地を紹介するために制作した
-          マルチページ型の旅行Webサイトです。レスポンシブ対応と
-          分かりやすいUI設計を重視しました。
-        </p>
-
-        <!-- ABOUT -->
-        <div class="project-about-box">
-          <h4>プロジェクト概要</h4>
+      <div class="skills-content">
+        <div class="skills-left">
+          <h3>専門スキル</h3>
           <p>
-            このプロジェクトでは、ユーザーが簡単に観光情報を閲覧できるように、
-            シンプルで直感的なデザインを採用しました。また、スマートフォンや
-            タブレットでも快適に利用できるようレスポンシブデザインを実装しています。
+            フロントエンド技術とJava／SQLを活用し、
+            モダンでクリーンかつ効率的なWebアプリケーション開発に取り組んでいます。
           </p>
+
+          <div class="skill"><div class="skill-title"><span>HTML</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress html"></div></div></div>
+          <div class="skill"><div class="skill-title"><span>CSS</span><span>85%</span></div><div class="skill-bar"><div class="skill-progress css"></div></div></div>
+          <div class="skill"><div class="skill-title"><span>JavaScript</span><span>75%</span></div><div class="skill-bar"><div class="skill-progress js"></div></div></div>
+          <div class="skill"><div class="skill-title"><span>Java</span><span>70%</span></div><div class="skill-bar"><div class="skill-progress java"></div></div></div>
+          <div class="skill"><div class="skill-title"><span>C</span><span>65%</span></div><div class="skill-bar"><div class="skill-progress c"></div></div></div>
+          <div class="skill"><div class="skill-title"><span>SQL</span><span>70%</span></div><div class="skill-bar"><div class="skill-progress sql"></div></div></div>
         </div>
 
-        <div class="project-stack">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
+        <div class="skills-cards">
+          <div class="tech-card tilt-card"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+          <div class="tech-card tilt-card"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+          <div class="tech-card tilt-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+          <div class="tech-card tilt-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
+          <div class="tech-card tilt-card"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+          <div class="tech-card tilt-card"><i class="fa-solid fa-code"></i><span>C</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work-section section reveal-up" id="work">
+      <div class="section-heading">
+        
+        <h2>ポートフォリオ</h2>
+        <p>フロントエンドおよびWeb開発スキルを活かして制作したプロジェクト一覧です。</p>
+      </div>
+
+      <div class="portfolio-wrap">
+        <article class="portfolio-item reveal-zoom tilt-card" onclick="openProject(this)" data-link="bangladesh-home-page/index.html">
+          <div class="portfolio-image">
+            <img src="images/bd-home-page.png" alt="バングラデシュ旅行サイト">
+          </div>
+          <div class="portfolio-content">
+            <span class="project-tag">フロントエンドプロジェクト</span>
+            <h3>バングラデシュ旅行ガイドサイト</h3>
+            <p>バングラデシュの観光情報を分かりやすく伝えるために制作した旅行ガイドサイトです。複数ページ構成で、文化・観光地・写真を整理し、見やすいUIを意識しました。</p>
+            <div class="project-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <a href="bangladesh-home-page/index.html" class="project-btn magnet" onclick="event.stopPropagation()">プロジェクトを見る</a>
+          </div>
+        </article>
+
+        <article class="portfolio-item reverse reveal-zoom delay-1 tilt-card">
+          <div class="portfolio-image">
+            <img src="images/classroomapps.webp" alt="掲示板アプリ">
+          </div>
+          <div class="portfolio-content">
+            <span class="project-tag">Webアプリケーション</span>
+            <h3>掲示板システム</h3>
+            <p>クラス内コミュニケーションの非効率を解決するために開発した掲示板アプリです。投稿・閲覧・返信機能を実装し、Java、JSP、Servlet、SQLでデータ管理を行いました。</p>
+            <div class="project-stack"><span>Java</span><span>JSP</span><span>Servlet</span><span>SQL</span></div>
+            <a href="#" class="project-btn magnet" onclick="event.stopPropagation(); openVideo(event)">▶ 動画を見る</a>
+          </div>
+        </article>
+
+        <article class="portfolio-item reveal-zoom delay-2 tilt-card" onclick="openProject(this)" data-link="game/index.html">
+          <div class="portfolio-image">
+            <img src="images/game.png" alt="ゲーム画面">
+          </div>
+          <div class="portfolio-content">
+            <span class="project-tag">UI / フロントエンド</span>
+            <h3>JavaScriptゲーム</h3>
+            <p>JavaScriptのイベント処理とゲームロジックを学ぶために制作したブラウザゲームです。操作性・画面変化・スコア管理を意識して実装しました。</p>
+            <div class="project-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <a href="game/index.html" class="project-btn magnet" onclick="event.stopPropagation()">プロジェクトを見る</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline-section section reveal-up" id="timeline">
+      <div class="section-heading">
+        <h2>学習・経験</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal-up">
+          <span>01</span>
+          <h3>HTML / CSS / JavaScript</h3>
+          <p>Webサイト制作の基礎を学び、ポートフォリオやUI制作に取り組みました。</p>
         </div>
 
-        <a href="bangladesh-home-page/index.html"
-           class="project-btn"
-           onclick="event.stopPropagation()">
-          プロジェクトを見る
-        </a>
+        <div class="timeline-item reveal-up">
+          <span>02</span>
+          <h3>Java / JSP / Servlet</h3>
+          <p>学校の授業でWebアプリケーションの仕組みを学び、掲示板アプリを開発しました。</p>
+        </div>
 
+        <div class="timeline-item reveal-up">
+          <span>03</span>
+          <h3>SQL / Database</h3>
+          <p>データ登録・検索・更新・削除など、Webアプリに必要なDB操作を学習しています。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO MODAL -->
+    <div id="videoModal" class="video-modal" aria-hidden="true">
+      <div class="video-content">
+        <button class="close-video magnet" onclick="closeVideo()" aria-label="動画を閉じる">×</button>
+        <video id="projectVideo" controls>
+          <source src="videos/紹介ムービー（D班）.mp4" type="video/mp4">
+          お使いのブラウザは動画タグに対応していません。
+        </video>
       </div>
     </div>
 
-    <!-- ================= PROJECT 2 ================= -->
-    <div class="portfolio-item reverse reveal-zoom delay-1">
-
-      <div class="portfolio-image">
-        <img src="images/classroomapps.webp" alt="掲示板アプリ" />
+    <!-- CONTACT -->
+    <section class="contact-section section reveal-up" id="contact">
+      <div class="section-heading">
+        
+        <h2>お問い合わせ</h2>
+        <p>プロジェクトやお仕事のご相談はお気軽にご連絡ください。</p>
       </div>
 
-      <div class="portfolio-content">
+      <div class="contact-grid">
+        <div class="contact-card glass tilt-card">
+          <h3>メッセージ送信</h3>
 
-        <span class="project-tag">Webアプリケーション</span>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">お名前</label>
+              <input id="name" name="name" type="text" placeholder="山田 太郎" required>
+            </div>
 
-        <h3 class="project-title">掲示板システム</h3>
+            <div class="form-group">
+              <label for="email">メールアドレス</label>
+              <input id="email" name="email" type="email" placeholder="example@email.com" required>
+            </div>
 
-        <p class="project-desc">
-          ユーザーが投稿・閲覧・返信できるクラス用の掲示板アプリです。
-          情報共有とコミュニケーションを目的として開発しました。
-        </p>
+            <div class="form-group">
+              <label for="message">メッセージ</label>
+              <textarea id="message" name="message" rows="5" placeholder="内容をご記入ください..." required></textarea>
+            </div>
 
-        <!-- ABOUT -->
-        <div class="project-about-box">
-          <h4>プロジェクト概要</h4>
-          <p>
-            Java、JSP、Servletを使用し、バックエンド処理とデータベース連携を
-            実装しました。ユーザー管理や投稿機能などを通して、
-            Webアプリケーション開発の基礎を学びました。
-          </p>
+            <button type="submit" class="send-btn magnet">送信 🚀</button>
+            <p class="form-msg" id="formMsg"></p>
+          </form>
         </div>
 
-        <div class="project-stack">
-          <span>Java</span>
-          <span>JSP</span>
-          <span>Servlet</span>
-          <span>SQL</span>
+        <div class="contact-card info dark tilt-card">
+          <h3>基本情報</h3>
+          <p class="muted">フリーランス、インターン、正社員の機会を探しています。</p>
+
+          <div class="info-list">
+            <div class="info-item">📍 日本在住</div>
+            <div class="info-item">✉️ freelancerridoy001@gmail.com</div>
+            <div class="info-item">💼 Web開発者</div>
+          </div>
+
+          <h4 class="connect-me">SNSはこちら ⬇</h4>
+
+          <div class="social">
+            <a class="magnet" href="https://www.facebook.com/ridoyjapan" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="magnet" href="https://www.instagram.com/ridoyjapan" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a class="magnet" href="https://x.com/ridoyx2001" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a class="magnet" href="https://github.com/ridoyjp" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+
+          <a href="#top" class="back-top-btn magnet">トップへ戻る</a>
         </div>
-
-        <a href="#"
-           class="project-btn"
-           onclick="event.stopPropagation(); openVideo(event)">
-          ▶ 動画を見る
-        </a>
-
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Ridoy. All Rights Reserved.</p>
     </div>
+  </footer>
 
-    <!-- ================= PROJECT 3 ================= -->
-    <div class="portfolio-item reveal-zoom delay-2"
-         onclick="openProject(this)"
-         data-link="game/index.html">
-
-      <div class="portfolio-image">
-        <img src="images/game.png" alt="ゲーム画面" />
-      </div>
-
-      <div class="portfolio-content">
-
-        <span class="project-tag">UI / フロントエンド</span>
-
-        <h3 class="project-title">JavaScriptゲーム</h3>
-
-        <p class="project-desc">
-          JavaScriptを使用して開発したシンプルなブラウザゲームです。
-          ユーザー操作に応じたインタラクティブな動作を実装しました。
-        </p>
-
-        <!-- ABOUT -->
-        <div class="project-about-box">
-          <h4>プロジェクト概要</h4>
-          <p>
-            イベント処理やゲームロジックの理解を目的として制作しました。
-            シンプルながらも操作しやすいUIと、リアルタイムな動きを意識して設計しています。
-          </p>
-        </div>
-
-        <div class="project-stack">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-
-        <a href="game/index.html"
-   class="project-btn"
-   onclick="event.stopPropagation()">
-  プロジェクトを見る
-</a>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- VIDEO MODAL -->
-<div id="videoModal" class="video-modal">
-  <div class="video-content">
-    <span class="close-video" onclick="closeVideo()">×</span>
-    <video id="projectVideo" controls>
-      <source src="videos/紹介ムービー（D班）.mp4" type="video/mp4">
-    </video>
-  </div>
-</div>
-<section class="contact-section" id="contact">
-  <div class="contact-header">
-    <h2>お問い合わせ</h2>
-    <p>プロジェクトやお仕事のご相談はお気軽にご連絡ください。</p>
-  </div>
-
-  <div class="contact-grid">
-
-    <div class="contact-card glass">
-      <h3>メッセージ送信</h3>
-
-      <form>
-        <div class="form-group">
-          <label>お名前</label>
-          <input type="text" placeholder="山田 太郎" required>
-        </div>
-
-        <div class="form-group">
-          <label>メールアドレス</label>
-          <input type="email" placeholder="example@email.com" required>
-        </div>
-
-        <div class="form-group">
-          <label>メッセージ</label>
-          <textarea rows="5" placeholder="内容をご記入ください..." required></textarea>
-        </div>
-
-        <button type="submit" class="send-btn">送信 🚀</button>
-      </form>
-    </div>
-
-    <div class="contact-card info dark">
-      <h3>基本情報</h3>
-      <p class="muted">
-        フリーランス、インターン、正社員の機会を探しています。
-      </p>
-
-      <div class="info-list">
-        <div class="info-item">📍 日本在住</div>
-        <div class="info-item">✉️ freelancerridoy001@gmail.com</div>
-        <div class="info-item">💼 Web開発者</div>
-      </div>
-
-      <h4 class="connnect-me">SNSはこちら ⬇ </h4>
-
-      <div class="social">
-        <a href="https://www.facebook.com/ridoyjapan" target="_blank">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a href="https://www.instagram.com/ridoyjapan" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="https://x.com/ridoyx2001" target="_blank">
-          <i class="fab fa-x-twitter"></i>
-        </a>
-        <a href="https://github.com/ridoyjp" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      </div>
-
-     <a href="#top" class="back-top-btn">トップへ戻る</a>
-    </div>
-
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="footer-bottom">
-    <p>© <span id="year"></span> Ridoy. 全著作権所有。</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
