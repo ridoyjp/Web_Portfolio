@@ -161,33 +161,37 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealItems.forEach(item => revealObserver.observe(item));
 
 // Contact form mailto
-const contactForm = document.getElementById("contactForm");
-const formMsg = document.getElementById("formMsg");
 
-if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
 
-    if (!name || !email || !message) {
-      formMsg.textContent = "すべての項目を入力してください。";
-      formMsg.className = "form-msg error";
-      return;
-    }
+  const formMsg = document.getElementById("formMsg");
 
-    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-    const body = encodeURIComponent(`お名前: ${name}\nメール: ${email}\n\nメッセージ:\n${message}`);
-
-    window.location.href = `mailto:freelancerridoy001@gmail.com?subject=${subject}&body=${body}`;
-
-    formMsg.textContent = "メールアプリを開きました。内容を確認して送信してください。";
-    formMsg.className = "form-msg success";
-  });
+if(!name || !email || !message){
+  formMsg.textContent = "すべての項目を入力してください。";
+  formMsg.className = "form-msg error";
+  return;
 }
 
+  const subject = encodeURIComponent("ポートフォリオからのお問い合わせ");
+  const body = encodeURIComponent(
+`お名前: ${name}
+メールアドレス: ${email}
+
+メッセージ:
+${message}`
+  );
+
+  // 🔥 Instant open mail app
+  window.location.href = `mailto:freelancerridoy001@gmail.com?subject=${subject}&body=${body}`;
+
+  // optional reset
+  this.reset();
+});
 
 
 // Magnetic hover

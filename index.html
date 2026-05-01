@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ridoy | Webデザイナー</title>
+  <title>リドイ | ポートフォリオ</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,6 +16,7 @@
   <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 <header class="navbar">
   <a class="logo" href="#top">Ridoy | ポートフォリオ</a>
+  
   <nav id="navLinks">
     <a class="active" href="#home">ホーム</a>
     <a href="#about">自己紹介</a>
@@ -40,10 +41,10 @@
   作品
 </a>
 
-<a class="hirebtn magnet" href="mailto:freelancerridoy001@gmail.com">
+<a class="hirebtn magnet"
+   href="mailto:freelancerridoy001@gmail.com?subject=Portfolio%20Contact&body=Hello%20Ridoy%2C%0A%0AI%20saw%20your%20portfolio.%20I%20would%20like%20to%20contact%20you.%0A%0AName%3A%0AMessage%3A">
   今すぐ連絡する
 </a>
-
     <div class="social">
       <a href="https://www.facebook.com/ridoyjapan" target="_blank" aria-label="Facebook">
         <i class="fab fa-facebook-f"></i>
@@ -79,7 +80,7 @@
       <p>
         私は現在、専門学校東京テクニカルカレッジで情報処理を学び、主にWebアプリケーション開発に重点を置いて実践的なITスキルを習得しています。
 
-授業やプロジェクトを通じて、HTML・CSS・JavaScript</br>・C・Java（Servlet／JSP）・SQLデータベースを用いたWebシステム開発を経験してきました。特に、掲示板システムや小規模SNSアプリケーションの開発に取り組み、機能性だけでなく、使いやすさやコードの可読性・整理にも注意して実装しました。
+授業やプロジェクトを通じて、HTML・CSS・JavaScript<br>・C・Java（Servlet／JSP）・SQLデータベースを用いたWebシステム開発を経験してきました。特に、掲示板システムや小規模SNSアプリケーションの開発に取り組み、機能性だけでなく、使いやすさやコードの可読性・整理にも注意して実装しました。
 
 また、責任感を持って課題に取り組む姿勢と、継続的に学習し続ける習慣を大切にしています。チーム開発では協調性を意識し、円滑なコミュニケーションを心がけてきました。
 
@@ -216,7 +217,7 @@
       <div class="section-heading">
         
         <h2>お問い合わせ</h2>
-        <p>プロジェクトやお仕事のご相談はお気軽にご連絡ください。</p>
+        <p>お仕事のご依頼やご相談など、お気軽にお問い合わせください。</p>
       </div>
 
       <div class="contact-grid">
@@ -224,24 +225,21 @@
           <h3>メッセージ送信</h3>
 
           <form id="contactForm">
-            <div class="form-group">
-              <label for="name">お名前</label>
-              <input id="name" name="name" type="text" placeholder="山田 太郎" required>
-            </div>
+  <div class="form-group">
+    <input id="name" type="text" placeholder="お名前" required>
+  </div>
 
-            <div class="form-group">
-              <label for="email">メールアドレス</label>
-              <input id="email" name="email" type="email" placeholder="example@email.com" required>
-            </div>
+  <div class="form-group">
+    <input id="email" type="email" placeholder="メールアドレス" required>
+  </div>
 
-            <div class="form-group">
-              <label for="message">メッセージ</label>
-              <textarea id="message" name="message" rows="5" placeholder="内容をご記入ください..." required></textarea>
-            </div>
+  <div class="form-group">
+    <textarea id="message" placeholder="メッセージを入力してください..." required></textarea>
+  </div>
 
-            <button type="submit" class="send-btn magnet">送信 🚀</button>
-            <p class="form-msg" id="formMsg"></p>
-          </form>
+ <button type="submit" class="send-btn">✉️ お問い合わせを送信</button>
+  <p class="form-msg" id="formMsg"></p>
+</form>
         </div>
 
         <div class="contact-card info dark tilt-card">
@@ -256,12 +254,36 @@
 
           <h4 class="connect-me">SNSはこちら ⬇</h4>
 
-          <div class="social">
-            <a class="magnet" href="https://www.facebook.com/ridoyjapan" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a class="magnet" href="https://www.instagram.com/ridoyjapan" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a class="magnet" href="https://x.com/ridoyx2001" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-            <a class="magnet" href="https://github.com/ridoyjp" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          </div>
+ <div class="social">
+
+  <!-- ✅ LINE -->
+  <a class="magnet" href="https://line.me/ti/p/~ridoy2001" target="_blank" aria-label="LINE">
+    <i class="fab fa-line"></i>
+  </a>
+
+  <!-- Facebook -->
+  <a class="magnet" href="https://www.facebook.com/ridoyjapan" target="_blank">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+
+  <!-- Instagram -->
+  <a class="magnet" href="https://www.instagram.com/ridoyjapan" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <!-- X -->
+  <a class="magnet" href="https://x.com/ridoyx2001" target="_blank">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+
+  <!-- GitHub -->
+  <a class="magnet" href="https://github.com/ridoyjp" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+
+  
+
+</div>
 
           <a href="#top" class="back-top-btn magnet">トップへ戻る</a>
         </div>

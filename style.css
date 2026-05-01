@@ -67,6 +67,7 @@ body[data-theme="dark"]{
 /* Body */
 body{
   background: #000814;
+  color: var(--text-main);
   position: relative;
 }
 
@@ -131,7 +132,7 @@ body{
   top:0;
   z-index:1000;
 
-  background: rgba(255,255,255,.85);
+  background: rgba(8, 14, 43, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 
@@ -1364,50 +1365,7 @@ body::before{
     justify-content:center;
   }
 }
-@media(max-width:900px){
-  .navbar{ padding:16px 24px; }
-  .navbar nav a{ margin-left:20px; font-size:16px; }
 
-  .hero{
-    flex-direction:column-reverse;
-    text-align:center;
-  }
-  .hero-right .blob{
-    width:320px;
-    height:320px;
-    margin-bottom:30px;
-  }
-  .hero-right img{ width:240px; }
-  .social{ justify-content:center; }
-
-  .about-content{ grid-template-columns: 1fr; gap: 40px; text-align:center; }
-  .about-text{ text-align:center; }
-
-  .skills-content{ grid-template-columns: 1fr; }
-  .skills-right{ margin-top: 40px; }
-  .skills-right img{ width: 100%; }
-
-  .work-grid{
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .contact-grid{ grid-template-columns: 1fr; }
-}
-
-@media (max-width: 600px){
-  .navbar{ padding: 14px 16px; }
-  .logo{ font-size: 20px; }
-  .navbar nav a{ margin-left: 14px; font-size: 15px; }
-
-  .work-header h2{ font-size: 34px; }
-}
-
-@media (max-width: 420px){
-  .hero{ padding: 56px 16px; }
-  .hero-right .blob{ width: 260px; height: 260px; }
-  .hero-right img{ width: 200px; }
-  .social a{ width: 38px; height: 38px; }
-}
 
 /* UNIQUE HOVER MOVE ANIMATION */
 .portfolio-item,
@@ -1425,7 +1383,7 @@ body::before{
 
 .workbtn:hover,
 .project-btn:hover {
-  animation: hoverMove .6s ease infinite alternate;
+  animation: hoverMove .6s ease 1 alternate;
 }
 
 @keyframes hoverMove {
@@ -1440,12 +1398,8 @@ body::before{
 
 
 .social a:hover {
-  transform: translateY(-8px) scale(1.12) rotate(8deg);
+  transform: translateY(-3px) scale(1.05);
 }
-
-
-
-
 
 
 /* ================= ULTRA PREMIUM ADDITIONS ================= */
