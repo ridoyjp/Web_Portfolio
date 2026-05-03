@@ -1539,3 +1539,83 @@ body::before{
   background:rgba(8, 14, 43, 0.92) !important;
   box-shadow:0 16px 55px rgba(0,0,0,.45);
 }
+
+/* =========================================
+   FINAL RESPONSIVE & UI FIXES (ADD AT END)
+   ========================================= */
+
+/* 📌 1. Blob overflow fix (mobile screen এ কাটবে না) */
+.hero-right .blob{
+  max-width: 90vw;
+  max-height: 90vw;
+}
+
+/* 📌 2. Tablet layout fix (portfolio stack হবে) */
+@media (max-width: 1024px){
+  .portfolio-item{
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-item.reverse{
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-image img{
+    height: auto;
+  }
+}
+
+/* 📌 3. Contact input mobile fix (input বড় হবে) */
+@media (max-width: 480px){
+  .form-group input,
+  .form-group textarea{
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+}
+
+/* 📌 4. Button mobile fix (tap friendly size) */
+@media (max-width: 600px){
+  .btn,
+  .workbtn,
+  .hirebtn,
+  .project-btn{
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}
+
+/* 📌 5. Section spacing responsive fix */
+.section{
+  padding: clamp(40px, 6vw, 70px) 0;
+}
+
+/* 📌 6. Horizontal scroll remove (side scroll বন্ধ) */
+body{
+  overflow-x: hidden;
+}
+
+/* 📌 7. All images responsive */
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* 📌 8. Ultra small device fix (320px phones) */
+@media (max-width: 360px){
+  .title{
+    font-size: 28px;
+  }
+
+  .hero-left h1{
+    font-size: 30px;
+  }
+
+  .section-title{
+    font-size: 26px;
+  }
+}
+
+/* =========================================
+   END OF FIXES
+   ========================================= */
